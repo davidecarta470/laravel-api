@@ -8,8 +8,8 @@ use  App\Post;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Post::all();
-        return response()->json(compact('posts'));
+        $posts = Post::paginate(5);
+        return response()->json($posts);
     }
 }
 

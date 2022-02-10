@@ -37317,10 +37317,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/admin/app.scss":
-/*!***************************************!*\
-  !*** ./resources/sass/admin/app.scss ***!
-  \***************************************/
+/***/ "./resources/sass/admin/style.scss":
+/*!*****************************************!*\
+  !*** ./resources/sass/admin/style.scss ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -37340,14 +37340,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************!*\
-  !*** multi ./resources/js/admin.js ./resources/sass/admin/app.scss ./resources/sass/guest/style.scss ***!
-  \*******************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** multi ./resources/js/admin.js ./resources/sass/admin/style.scss ./resources/sass/guest/style.scss ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\ssimo\Documents\boolean\html\lara\laravel-api\resources\js\admin.js */"./resources/js/admin.js");
-__webpack_require__(/*! C:\Users\ssimo\Documents\boolean\html\lara\laravel-api\resources\sass\admin\app.scss */"./resources/sass/admin/app.scss");
+__webpack_require__(/*! C:\Users\ssimo\Documents\boolean\html\lara\laravel-api\resources\sass\admin\style.scss */"./resources/sass/admin/style.scss");
 module.exports = __webpack_require__(/*! C:\Users\ssimo\Documents\boolean\html\lara\laravel-api\resources\sass\guest\style.scss */"./resources/sass/guest/style.scss");
 
 
