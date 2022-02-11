@@ -3,7 +3,7 @@
     <header>
       <ul>
         <li><h3><router-link :to="{name:'home'}">home</router-link></h3></li>
-        <li><h3><a href="" class="active">blog</a></h3></li>
+        <li><h3><router-link :to="{name:'blog'}"> blog</router-link></h3></li>
         <li><h3><router-link :to="{name:'about'}">about</router-link></h3></li>
         <li><h3><router-link :to="{name:'contacts'}">contacts</router-link></h3></li>
       </ul>
