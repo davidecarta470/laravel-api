@@ -1,30 +1,35 @@
 <template>
   <main class="container">
     <h1>I miei post</h1>
-    <PostItem 
-    v-for="post in posts" :key="post.id"
-    :post="post"
-    />
-    <div>
-      <button 
-        @click="getApi(pagination.current - 1)"
-        :disabled="pagination.current===1"
-      > << </button>
+    <div v-if="posts">
+      <PostItem 
+      v-for="post in posts" :key="post.id"
+      :post="post"
+      />
+      <div>
+        <button 
+          @click="getApi(pagination.current - 1)"
+          :disabled="pagination.current===1"
+        > << </button>
 
-      <button 
-        v-for="i in pagination.last" :key="i"
-        @click="getApi(i)"
-        :disabled="pagination.current === i"
-      >
-        {{i}}
-      </button>
-      
-      <button 
-        @click="getApi(pagination.current + 1)"
-        :disabled="pagination.current===pagination.last"
-      > >> 
-      </button>
+        <button 
+          v-for="i in pagination.last" :key="i"
+          @click="getApi(i)"
+          :disabled="pagination.current === i"
+        >
+          {{i}}
+        </button>
+        
+        <button 
+          @click="getApi(pagination.current + 1)"
+          :disabled="pagination.current===pagination.last"
+        > >> 
+        </button>
 
+      </div>
+    </div>
+    <div v-else class="loading">
+      <h3>loading...</h3>
     </div>
   </main>
 </template>
@@ -46,9 +51,10 @@ export default {
   },
   methods:{
     getApi(page = 1){
+      this.posts = null;
       axios.get(this.apiUrl + page)
       .then(r => {
-        
+        console.log(r.data)
         this.posts= r.data.data;
         this.pagination={
           current:r.data.current_page,
@@ -75,6 +81,7 @@ export default {
       
   },
   mounted(){
+    
     this.getApi()
   }
 
@@ -91,6 +98,12 @@ main{
       width:30px;
       margin-right:10px;
     }
+  }
+  .loading{
+    
+    display: flex;
+    justify-content: center;
+    padding:15%;
   }
 }
 </style>

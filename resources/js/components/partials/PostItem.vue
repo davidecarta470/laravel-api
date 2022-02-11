@@ -2,6 +2,11 @@
   <div class="post">
     <h3 ><a href="">{{post.title}}</a></h3>
     <h5>{{formatData}}</h5>
+
+    <div v-if="post.category">
+      <h6>{{post.category.name}}</h6>
+    </div>
+    
     <p>{{cutTest}}</p>
   </div>
 </template>

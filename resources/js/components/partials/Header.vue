@@ -2,10 +2,10 @@
   <div>
     <header>
       <ul>
-        <li><h3><a href="" >home</a></h3></li>
+        <li><h3><router-link :to="{name:'home'}">home</router-link></h3></li>
         <li><h3><a href="" class="active">blog</a></h3></li>
-        <li><h3><a href="">about</a></h3></li>
-        <li><h3><a href="">contacts</a></h3></li>
+        <li><h3><router-link :to="{name:'about'}">about</router-link></h3></li>
+        <li><h3><router-link :to="{name:'contacts'}">contacts</router-link></h3></li>
       </ul>
     </header>
   </div>
