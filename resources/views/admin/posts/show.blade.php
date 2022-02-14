@@ -30,3 +30,6 @@
   <h2 class="d-flex justify-content-end mr-5"><a href="{{route('admin.posts.index')}}">< < BACK</a></h2> 
 </div>
 @endsection
+@section('title')
+    admin| post detail
+@endsection

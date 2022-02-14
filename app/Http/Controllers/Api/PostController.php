@@ -12,8 +12,14 @@ class PostController extends Controller
         $posts = Post::with(['category','tags'])->paginate(4);
         return response()->json($posts);
     }
+
+
     public function show($slug){
-         $post = Post::where('slug',$slug)->first();
+         $post = Post::where('slug',$slug)->with(['tags','category'])->first();
+
+         if(!$post){
+             return ["title" => "pagina non trovata"];
+         }
          return response()->json($post);
     }
 }

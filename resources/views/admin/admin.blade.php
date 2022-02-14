@@ -20,4 +20,9 @@
         </div>
     </div>
 </div>
+
+
+@section('title')
+    |admin Home
+@endsection
 @endsection

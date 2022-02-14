@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import PostItem from "../partials/PostItem.vue";
+import PostItem from "./PostItem.vue";
 export default {
   name:"posts",
   components:{
