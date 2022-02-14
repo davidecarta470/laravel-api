@@ -3765,21 +3765,18 @@ var render = function () {
       _c("h1", [_vm._v(_vm._s(_vm.post.title))]),
       _vm._v(" "),
       _vm.post.category
-        ? _c("h4", [_vm._v("Category : " + _vm._s(_vm.post.category.name))])
-        : _c("h4", [_vm._v("-")]),
+        ? _c("h4", [_vm._v(_vm._s(_vm.post.category.name))])
+        : _c("h4"),
       _vm._v(" "),
       _c(
         "div",
         { staticClass: "tag" },
-        [
-          _vm._v("\r\n      Tags :"),
-          _vm._l(_vm.post.tags, function (tag) {
-            return _c("span", { key: tag.id }, [
-              _vm._v(" " + _vm._s(tag.name) + " "),
-            ])
-          }),
-        ],
-        2
+        _vm._l(_vm.post.tags, function (tag) {
+          return _c("span", { key: tag.id }, [
+            _vm._v(" " + _vm._s(tag.name) + " "),
+          ])
+        }),
+        0
       ),
       _vm._v(" "),
       _c("p", [_vm._v(_vm._s(_vm.post.content))]),

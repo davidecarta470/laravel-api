@@ -3,10 +3,10 @@
   <div class="container">
     <h1>{{post.title}}</h1>
 
-    <h4 v-if="post.category">Category : {{post.category.name}}</h4>
-    <h4 v-else>-</h4>
+    <h4 v-if="post.category">{{post.category.name}}</h4>
+    <h4 v-else></h4>
     <div class="tag">
-      Tags :<span v-for="tag in post.tags" :key="tag.id"> {{tag.name}} </span>
+      <span v-for="tag in post.tags" :key="tag.id"> {{tag.name}} </span>
     </div>
     <p>{{post.content}}</p>
   </div>
